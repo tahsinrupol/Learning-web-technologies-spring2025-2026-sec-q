@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Admin Registration</title>
+<script>
+function validateForm() {
+    var name = document.getElementById('name').value;
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password').value;
+    if(name=="" || username=="" || password==""){
+        alert("All fields are required!");
+        return false;
+    }
+    return true;
+}
+</script>
+</head>
+<body>
+<h2>Admin Registration</h2>
+<form method="POST" action="register.php" onsubmit="return validateForm()">
+    Name: <input type="text" id="name" name="name"><br>
+    Username: <input type="text" id="username" name="username"><br>
+    Password: <input type="password" id="password" name="password"><br>
+    <input type="submit" value="Register">
+</form>
+Already registered? <a href="login.html">Login here</a>
+</body>
+</html>
